@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="822.0" prefWidth="1223.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lazydevelopers.controllers.FXMLMainMenuController">
+  <children>
+      <HBox prefHeight="39.0" prefWidth="1223.0">
+         <children>
+          <MenuBar prefHeight="38.0" prefWidth="1224.0">
+            <menus>
+                  <Menu mnemonicParsing="false" text="Labo. Logistic">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@TestTube.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <items>
+                        <MenuItem fx:id="meb_main" mnemonicParsing="false" text="Main Menu" />
+                     </items>
+                  </Menu>
+              <Menu mnemonicParsing="false" text="Menu">
+                     <items>
+                        <MenuItem fx:id="meb_products" mnemonicParsing="false" text="Products" />
+                        <MenuItem fx:id="meb_utensils" mnemonicParsing="false" text="Utensils" />
+                        <MenuItem fx:id="meb_projects" mnemonicParsing="false" text="Projects" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+              </Menu>
+                  <Menu mnemonicParsing="false" text="Users">
+                    <items>
+                      <MenuItem fx:id="meb_userlist" mnemonicParsing="false" text="User List" />
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@users.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="User">
+                  <items>
+                    <MenuItem fx:id="meb_profile" mnemonicParsing="false" text="Profile" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="meb_logout" mnemonicParsing="false" text="LogOut" />
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@User.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+            </menus>
+          </MenuBar>
+         </children>
+      </HBox>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="831.0" prefWidth="1223.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e3e382" height="91.0" layoutX="76.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="1066.0" />
+            <Label fx:id="lbl_welcome" layoutX="592.0" layoutY="76.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="512.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="76.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="491.0" text="Welcome: ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e3e382" height="494.0" layoutX="76.0" layoutY="204.0" stroke="BLACK" strokeType="INSIDE" width="1066.0" />
+            <ImageView fitHeight="284.0" fitWidth="291.0" layoutX="450.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TestTube.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+      <AnchorPane prefHeight="118.0" prefWidth="1223.0">
+         <children>
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="1223.0">
+               <items>
+                  <Label fx:id="lbl_privilege" nodeOrientation="LEFT_TO_RIGHT" prefHeight="21.0" prefWidth="170.0" />
+                  <Label prefHeight="21.0" prefWidth="157.0" text="Privilege: " />
+               </items>
+            </ToolBar>
+            <Separator prefHeight="0.0" prefWidth="1223.0" />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

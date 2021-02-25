@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox prefHeight="616.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lazydevelopers.controllers.FXMLProjectController">
+  <children>
+      <HBox prefHeight="37.0">
+         <children>
+          <MenuBar prefHeight="38.0" prefWidth="1224.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Labo. Logistic">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@TestTube.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <items>
+                        <MenuItem fx:id="meb_main" mnemonicParsing="false" text="Main Menu" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Menu">
+                     <items>
+                        <MenuItem fx:id="meb_products" mnemonicParsing="false" text="Products" />
+                        <MenuItem fx:id="meb_utensils" mnemonicParsing="false" text="Utensils" />
+                        <MenuItem fx:id="meb_projects" mnemonicParsing="false" text="Projects" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Users">
+                     <items>
+                        <MenuItem fx:id="meb_userlist" mnemonicParsing="false" text="User List" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@users.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="User">
+                     <items>
+                        <MenuItem fx:id="meb_profile" mnemonicParsing="false" text="Profile" />
+                        <MenuItem fx:id="meb_logout" mnemonicParsing="false" text="LogOut" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@User.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="542.0" prefWidth="1172.0" snapToPixel="false" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="projectTable" layoutX="26.0" layoutY="171.0" prefHeight="371.0" prefWidth="1010.0">
+              <columns>
+                <TableColumn fx:id="projectNameColumn" minWidth="0.0" prefWidth="197.0" text="NAME" />
+                  <TableColumn fx:id="projectDescColumn" prefWidth="347.0" text="DESCRIPTION" />
+                  <TableColumn fx:id="projectStartColumn" minWidth="0.0" prefWidth="232.0" text="START DATE" />
+                  <TableColumn fx:id="projectFinishColumn" minWidth="0.0" prefWidth="233.0" text="FINISH DATE" />
+                 <!-- <TableColumn fx:id="projectUsersColumn" maxWidth="503.0" prefWidth="235.0" text="USERS" /> -->
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="32.0" layoutY="25.0">
+               <children>
+                  <Rectangle fill="TRANSPARENT" height="137.0" layoutX="3.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="1000.0" />
+                  <Label layoutX="21.0" layoutY="14.0" prefHeight="31.0" prefWidth="170.0" text="Name or Description:" />
+                  <TextField fx:id="txt_ProjectName" layoutX="21.0" layoutY="45.0" prefHeight="40.0" prefWidth="733.0" promptText="Project Name or Description" />
+                  <Separator layoutX="791.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="0.0" />
+                  <Button fx:id="btn_AddProject" layoutX="846.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="125.0" text="ADD" />
+                  <Button fx:id="btn_ModifyProject" layoutX="846.0" layoutY="43.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="125.0" text="MODIFY" />                  
+                  <Button fx:id="btn_DeleteProject" layoutX="846.0" layoutY="82.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="125.0" text="DELETE" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="35.0" prefWidth="978.0">
+         <children>
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" />
+            <Separator />
+            <Label fx:id="lbl_privilege" layoutX="879.0" layoutY="11.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="21.0" prefWidth="170.0" />
+            <Label layoutX="765.0" layoutY="7.0" prefHeight="21.0" prefWidth="157.0" text="Privilege: " />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
